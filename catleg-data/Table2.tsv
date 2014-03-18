@@ -1,0 +1,14 @@
+Axis	Location X (cm)	Y (cm)	Z(cm)	Orientation X(cm/cm)	Y(cm/cm)	Z(cm/cm)		
+Pelvis reference frame	 NaN	 NaN	 NaN	 NaN	 NaN	 NaN
+Hip Rotation center	 3.95	 0.45	 1.01	 NaN	 NaN	 NaN
+Knee reference frame	 NaN	 NaN	 NaN	 NaN	 NaN	 NaN
+Hip Rotation	 0.15	 1.61	 0.14	 NaN	 NaN	 NaN
+Knee Flexion (measured)	 10.66	 0.08	 -0.15	 -0.133	 -0.98	 -0.132
+Knee Flexion (final)	 9.91	 -0.70	 -0.05	 -0.073	 -0.997	 -0.032
+Shank reference frame	 NaN	 NaN	 NaN	 NaN	 NaN	 NaN
+Knee Rotation (measured)	 3.31	 -0.67	 1.23	 0.860	 -0.01	 0.495
+Knee Rotation (final)	 0.04	 -0.65	 -0.65	 0.867	 -0.006	 0.499
+Ankle Flexion (measured)	 10.67	 0.087	 -0.14	 -0.065	 0.998	 -0.002
+Ankle Flexion (final)	 10.67	 0.06	 -0.14	 0.017	 0.9903	 -0.138
+Foot reference frame	 NaN	 NaN	 NaN	 NaN	 NaN	 NaN
+Ankle Rotation	 3.57	 0.16	 3.88	 0.211	 0.029	 0.977
