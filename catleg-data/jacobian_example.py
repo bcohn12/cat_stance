@@ -1,5 +1,5 @@
-import sympy as sympy
-import numpy as numpy
+import sympy
+import numpy
 
 def symbolic_jacobian(functions, variables):
     """
