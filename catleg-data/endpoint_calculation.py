@@ -10,6 +10,11 @@ def symbolic_jacobian(functions, variables):
     return sympy.Matrix([[sympy.diff(f, x) for x in variables] for f in functions])
 
 def planar_three_joint_jacobian(q, L):
+    """
+    input a three-element vector of angles, a three-element list of limb lengths.
+    Produces a jacobian matrix representing the endpoint calculation.
+    """
+
     cos = sympy.cos
     sin = sympy.sin
  
@@ -28,4 +33,24 @@ def planar_three_joint_jacobian(q, L):
 
     return numpy.linalg.inv(J_numpy).transpose()
     
-_J = planar_three_joint_jacobian(q = [20, 30, 40], L = [25, 15, 10])
+_J = planar_three_joint_jacobian(q = [90, 90, 90], L = [10, 11.1, 10])
+
+def endpoint_position(q, L):
+    """
+    input a three-element vector of angles, a three-element list of limb lengths.
+    Produces a 3 element list representing the endpoint calculation (x, y, alpha (orientation)).
+    """
+    import numpy as np
+    G_x = L[0] * np.cos(q[0]) + L[2]*np.cos(q[0] + q[1]) + L[2] * np.cos(q[0]+q[1]+q[2])
+    G_y = L[0] * np.sin(q[0]) + L[2]*np.sin(q[0] + q[1]) + L[2] * np.sin(q[0]+q[1]+q[2])
+    G_alpha = q[0] + q[1] + q[2]
+    x = [G_x, G_y, G_alpha]
+    return x
+
+
+
+
+_D = endpoint_position(q=[0,0,0],L=[10,10,10])
+
+
+
