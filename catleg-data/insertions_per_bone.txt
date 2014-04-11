@@ -36,9 +36,9 @@ Gluteus medius insertion
 Gluteus minimus insertion	
 Greater trochanter	 
 Iliopsoas insertion	 
-Lateral femoral condyle	
+Lateral femoral condyle BONE	
 # Lateral gastrocnemius origin	
-Medial femoral condyle	
+Medial femoral condyle BONE	
 # Medial gastrocnemius origin	
 Pectineus insertion	
 # Plantaris origin	
@@ -66,9 +66,9 @@ TIBIAL
 # Flexor hallucis longus origin
 # Flexor hallucis longus via point
 # Gracilis insertion
-Lateral malleolus
-Medial malleolus
-Medial tibial condyle
+Lateral malleolus BONE LANDMARK
+Medial malleolus BONE LANDMARK
+Medial tibial condyle BONE
 # Peroneus brevis origin
 # Peroneus brevis via point
 # Peroneus longus origin
@@ -92,11 +92,11 @@ foot
 # Flexor digitorum longus insertion	 
 # Flexor digitorum longus via point 2	 
 # Flexor hallucis longus via point 2	 
-Calcaneus	
+Calcaneus	BONE
 # Lateral gastrocnemius insertion	 
-Lateral metatarsal phalangeal joint	 
+Lateral metatarsal phalangeal joint	  BONE LANDMARK
 # Medial gastrocnemius insertion	 
-Medial metatarsal phalangeal joint	
+Medial metatarsal phalangeal joint	BONE LANDMARK
 # Peroneus brevis insertion	 
 # Peroneus brevis via point 2	 
 # Plantaris via point	 
