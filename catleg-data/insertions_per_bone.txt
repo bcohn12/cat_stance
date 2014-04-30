@@ -16,20 +16,20 @@ Pectineus origin
 Psoas minor origin	
 Pyriformis origin	
 Quadratus femoris origin	 
-Rectus femoris origin	
+# Rectus femoris origin	
 Sartorius origin	
-Semimembranosus origin	
-Semitendinosus origin
+# Semimembranosus origin	
+# Semitendinosus origin
 
 
 
 FEMORAL 
 Adductor femoris insertion	 
 Adductor longus insertion	 
-Biceps femoris, anterior head insertion	 
-Biceps femoris, anterior head, via point
+# Biceps femoris, anterior head insertion	 
+# Biceps femoris, anterior head, via point
 Caudofemoralis insertion	 
-Extensor digitorum longus origin	 
+# Extensor digitorum longus origin	 
 Femoral head	  
 Gluteus maximus insertion	
 Gluteus medius insertion	
@@ -37,72 +37,72 @@ Gluteus minimus insertion
 Greater trochanter	 
 Iliopsoas insertion	 
 Lateral femoral condyle	
-Lateral gastrocnemius origin	
+# Lateral gastrocnemius origin	
 Medial femoral condyle	
-Medial gastrocnemius origin	
+# Medial gastrocnemius origin	
 Pectineus insertion	
-Plantaris origin	
+# Plantaris origin	
 Psoas minor insertion	
 Pyriformis insertion	
 Quadratus femoris insertion	
-Rectus femoris via point	
-Semimembranosus insertion	
-Vastus intermedius origin	
-Vastus intermedius via point	
-Vastus lateralis origin	 
-Vastus lateralis via point
-Vastus medius origin	 
-Vastus medius via point	 
+# Rectus femoris via point	
+# Semimembranosus insertion	
+# Vastus intermedius origin	
+# Vastus intermedius via point	
+# Vastus lateralis origin	 
+# Vastus lateralis via point
+# Vastus medius origin	 
+# Vastus medius via point	 
 
 
 TIBIAL
 
-Biceps femoris posterior head insertion
-Biceps femoris posterior head via point
-Extensor digitorum longus via point 0
-Extensor digitorum longus via point 1
-Flexor digitorum longus origin
-Flexor digitorum longus via point 1
-Flexor hallucis longus origin
-Flexor hallucis longus via point
-Gracilis insertion
+# Biceps femoris posterior head insertion
+# Biceps femoris posterior head via point
+# Extensor digitorum longus via point 0
+# Extensor digitorum longus via point 1
+# Flexor digitorum longus origin
+# Flexor digitorum longus via point 1
+# Flexor hallucis longus origin
+# Flexor hallucis longus via point
+# Gracilis insertion
 Lateral malleolus
 Medial malleolus
 Medial tibial condyle
-Peroneus brevis origin
-Peroneus brevis via point
-Peroneus longus origin
-Peroneus longus via point
-Peroneus tertius origin
-Peroneus tertius via point
+# Peroneus brevis origin
+# Peroneus brevis via point
+# Peroneus longus origin
+# Peroneus longus via point
+# Peroneus tertius origin
+# Peroneus tertius via point
 Quadriceps common insertion
 Sartorius insertion	 
-Soleus origin
-Semitendinosus insertion
-Semitendinosus via point
-Tibialis anterior origin
-Tibialis anterior via point
-Tibialis posterior origin
-Tibialis posterior via point
+# Soleus origin
+# Semitendinosus insertion
+# Semitendinosus via point
+# Tibialis anterior origin
+# Tibialis anterior via point
+# Tibialis posterior origin
+# Tibialis posterior via point
 
 
 foot
 
-Extensor digitorum longus via point 2
-Flexor digitorum longus insertion	 
-Flexor digitorum longus via point 2	 
-Flexor hallucis longus via point 2	 
+# Extensor digitorum longus via point 2
+# Flexor digitorum longus insertion	 
+# Flexor digitorum longus via point 2	 
+# Flexor hallucis longus via point 2	 
 Calcaneus	
-Lateral gastrocnemius insertion	 
+# Lateral gastrocnemius insertion	 
 Lateral metatarsal phalangeal joint	 
-Medial gastrocnemius insertion	 
+# Medial gastrocnemius insertion	 
 Medial metatarsal phalangeal joint	
-Peroneus brevis insertion	 
-Peroneus brevis via point 2	 
-Plantaris via point	 
-Peroneus longus insertion	 
-Peroneus tertius insertion	 
-Peroneus tertius via point	 
-Soleus insertion	 
-Tibialis anterior insertion	 
-Tibialis posterior insertion
+# Peroneus brevis insertion	 
+# Peroneus brevis via point 2	 
+# Plantaris via point	 
+# Peroneus longus insertion	 
+# Peroneus tertius insertion	 
+# Peroneus tertius via point	 
+# Soleus insertion	 
+# Tibialis anterior insertion	 
+# Tibialis posterior insertion
