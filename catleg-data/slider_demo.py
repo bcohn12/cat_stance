@@ -9,12 +9,7 @@ a0 = 5
 f0 = 3
 s = a0*np.sin(2*np.pi*f0*t)
 l, = plt.plot(t,s, lw=2, color='red')
-plt.axis([-30, 30, -30, 30])
-
-plt.Circle((e, e), radius=0.07, color='g')
-
-
-
+plt.axis([0, 1, -10, 10])
 
 axcolor = 'lightgoldenrodyellow'
 axfreq = plt.axes([0.25, 0.1, 0.65, 0.03], axisbg=axcolor)

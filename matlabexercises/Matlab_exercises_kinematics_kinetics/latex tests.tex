@@ -1,0 +1,132 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{Brief Article}
+\author{The Author}
+%\date{}                                           % Activate to display a given date or no date
+
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+
+\begin{document}
+
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+
+\section*{Matlab Code}
+
+\lstinputlisting{J2D2DOF.m}
+
+
+\begin{align}
+\label{ }
+G=\left[\begin{array}{c} \mathrm{l2}\, \cos\!\left(\mathrm{q1} + \mathrm{q2}\right) + \mathrm{l1}\, \cos\!\left(\mathrm{q1}\right)\\ \mathrm{l2}\, \sin\!\left(\mathrm{q1} + \mathrm{q2}\right) + \mathrm{l1}\, \sin\!\left(\mathrm{q1}\right) \end{array}\right] \\
+J=\left[\begin{array}{cc}  - \mathrm{l2}\, \sin\!\left(\mathrm{q1} + \mathrm{q2}\right) - \mathrm{l1}\, \sin\!\left(\mathrm{q1}\right) & - \mathrm{l2}\, \sin\!\left(\mathrm{q1} + \mathrm{q2}\right)\\ \mathrm{l2}\, \cos\!\left(\mathrm{q1} + \mathrm{q2}\right) + \mathrm{l1}\, \cos\!\left(\mathrm{q1}\right) & \mathrm{l2}\, \cos\!\left(\mathrm{q1} + \mathrm{q2}\right) \end{array}\right] \\
+J^T=\left[\begin{array}{cc}  - \sin\!\left(\mathrm{q1}\right)\, \mathrm{l1} - \sin\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \mathrm{l2} & \cos\!\left(\mathrm{q1}\right)\, \mathrm{l1} + \cos\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \mathrm{l2}\\ - \sin\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \mathrm{l2} & \cos\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \mathrm{l2} \end{array}\right] \\
+J^{-1}=\left[\begin{array}{cc} -\frac{\cos\!\left(\mathrm{q1} + \mathrm{q2}\right)}{\mathrm{l1}\, \cos\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \sin\!\left(\mathrm{q1}\right) - \mathrm{l1}\, \sin\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \cos\!\left(\mathrm{q1}\right)} & -\frac{\sin\!\left(\mathrm{q1} + \mathrm{q2}\right)}{\mathrm{l1}\, \cos\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \sin\!\left(\mathrm{q1}\right) - \mathrm{l1}\, \sin\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \cos\!\left(\mathrm{q1}\right)}\\ \frac{\mathrm{l2}\, \cos\!\left(\mathrm{q1} + \mathrm{q2}\right) + \mathrm{l1}\, \cos\!\left(\mathrm{q1}\right)}{\mathrm{l1}\, \mathrm{l2}\, \cos\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \sin\!\left(\mathrm{q1}\right) - \mathrm{l1}\, \mathrm{l2}\, \sin\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \cos\!\left(\mathrm{q1}\right)} & \frac{\mathrm{l2}\, \sin\!\left(\mathrm{q1} + \mathrm{q2}\right) + \mathrm{l1}\, \sin\!\left(\mathrm{q1}\right)}{\mathrm{l1}\, \mathrm{l2}\, \cos\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \sin\!\left(\mathrm{q1}\right) - \mathrm{l1}\, \mathrm{l2}\, \sin\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \cos\!\left(\mathrm{q1}\right)} \end{array}\right] \\
+J^{-T}=\left[\begin{array}{cc} \frac{\cos\!\left(\mathrm{q1} + \mathrm{q2}\right)}{\cos\!\left(\mathrm{q1}\right)\, \sin\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \mathrm{l1} - \sin\!\left(\mathrm{q1}\right)\, \cos\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \mathrm{l1}} & -\frac{\cos\!\left(\mathrm{q1}\right)\, \mathrm{l1} + \cos\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \mathrm{l2}}{\cos\!\left(\mathrm{q1}\right)\, \sin\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \mathrm{l1}\, \mathrm{l2} - \sin\!\left(\mathrm{q1}\right)\, \cos\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \mathrm{l1}\, \mathrm{l2}}\\ \frac{\sin\!\left(\mathrm{q1} + \mathrm{q2}\right)}{\cos\!\left(\mathrm{q1}\right)\, \sin\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \mathrm{l1} - \sin\!\left(\mathrm{q1}\right)\, \cos\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \mathrm{l1}} & -\frac{\sin\!\left(\mathrm{q1}\right)\, \mathrm{l1} + \sin\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \mathrm{l2}}{\cos\!\left(\mathrm{q1}\right)\, \sin\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \mathrm{l1}\, \mathrm{l2} - \sin\!\left(\mathrm{q1}\right)\, \cos\!\left(\mathrm{q1} + \mathrm{q2}\right)\, \mathrm{l1}\, \mathrm{l2}} \end{array}\right]
+\end{align}
+
+
+
+\noindent
+Example with unit link lengths and the second joint flexed $90^\circ$  (in radians)
+\begin{align*}
+l1 =     1 \\
+l2 =     1 \\
+q1 =     0 \\
+q2 =    1.5708
+\end{align*}
+\noindent
+Evaluating these functions with those parameter values:\\
+\begin{align*}
+G=\left[\begin{array}{r}
+	1 \\
+	1
+	\end{array}\right] \\
+J =\left[\begin{array}{rr}
+	   -1.0000 &  -1.0000 \\
+	    1.0000  &  0.0000
+	    \end{array}\right] \\
+J^T =\left[\begin{array}{rr}
+	   -1.0000  &  1.0000\\
+	   -1.0000  &  0.0000
+	       \end{array}\right] \\
+J^{-1} =\left[\begin{array}{rr}
+	    0.0000  &  1.0000\\
+	   -1.0000  & -1.0000
+	       \end{array}\right] \\
+J^{-T} =\left[\begin{array}{rr}
+	    0.0000  & -1.0000\\
+	    1.0000  & -1.0000
+	        \end{array}\right]
+\end{align*}
+
+\noindent
+Example of applying a positive angular velocity at q1 to find the endpoint velocity $\dot{\vec{x}}$
+\begin{align*}
+\dot{\vec{q}} =\left[\begin{array}{r}
+	1 \\
+	 0
+	 \end{array}\right] \\
+ \to \dot{\vec{x}} =\left[\begin{array}{r}
+	    -1\\
+	     1
+	\end{array}\right]
+\end{align*}
+\noindent
+Example of applying that same endpoint velocity $\dot{\vec{x}}$ to find the angular velocities $\dot{\vec{q}}$
+\begin{align*}
+\to \dot{\vec{q}} =\left[\begin{array}{r}
+    1.0000\\
+         0
+\end{array}\right] \\
+\end{align*}
+\noindent
+Example of applying a horizontal endpoint force vector $\vec{f}$ to find the resulting joint torques
+\begin{align*}
+\vec{f} =\left[\begin{array}{r}
+	1 \\
+	 0
+	 \end{array}\right] \\
+\to \vec{\tau} =\left[\begin{array}{r}
+	    -1\\
+	    -1
+	\end{array}\right]
+\end{align*}
+\noindent	 
+Example of applying those joint torques $\vec{\tau}$ to find the resulting endpoint force $\vec{f}$
+\begin{align*}
+\to \vec{f} =\left[\begin{array}{r}
+	    1.0000\\
+	         0
+	\end{array}\right]
+\end{align*}
+
+\end{document}  

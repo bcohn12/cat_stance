@@ -47,10 +47,15 @@ def endpoint_position(q, L):
     x = [G_x, G_y, G_alpha]
     return x
 
-
-
-
 _D = endpoint_position(q=[0,0,0],L=[10,10,10])
 
+def main():
+    #setup variables
+    angles = [90,8,90]
+    limbs = [11,11,12]
+    endpt = endpoint_position(angles, limbs)
+    print endpt
 
+if __name__ == '__main__':
+    main()
 
